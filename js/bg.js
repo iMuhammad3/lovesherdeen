@@ -4,41 +4,41 @@ const color2 = document.getElementById("color2");
 
 // Function to apply background
 function applyBackground() {
-    // If gradient values exist, use gradient
-    if (localStorage.getItem("color1") && localStorage.getItem("color2")) {
-        document.body.style.background = `linear-gradient(40deg, ${localStorage.getItem("color1")}, ${localStorage.getItem("color2")})`;
+    if (sessionStorage.getItem("color1") && sessionStorage.getItem("color2")) {
+        // Apply gradient if stored
+        document.body.style.background = `linear-gradient(40deg, ${sessionStorage.getItem("color1")}, ${sessionStorage.getItem("color2")})`;
     } 
-    // Else if single background color exists
-    else if (localStorage.getItem("bgColor")) {
-        document.body.style.background = localStorage.getItem("bgColor");
+    else if (sessionStorage.getItem("bgColor")) {
+        // Apply single color if stored
+        document.body.style.background = sessionStorage.getItem("bgColor");
     }
 }
 
-// On page load, apply stored background
+// On page load, apply session-stored background
 applyBackground();
 
 // Listen for single color picker
 colorPicker.addEventListener("input", () => {
-    // Clear gradient
-    localStorage.removeItem("color1");
-    localStorage.removeItem("color2");
+    // Remove gradient if any
+    sessionStorage.removeItem("color1");
+    sessionStorage.removeItem("color2");
 
     document.body.style.background = colorPicker.value;
 
-    // Store in localStorage
-    localStorage.setItem("bgColor", colorPicker.value);
+    // Store in sessionStorage for this session
+    sessionStorage.setItem("bgColor", colorPicker.value);
 });
 
 // Listen for gradient changes
 function setGradient() {
     document.body.style.background = `linear-gradient(40deg, ${color1.value}, ${color2.value})`;
 
-    // Clear single color
-    localStorage.removeItem("bgColor");
+    // Remove single color if any
+    sessionStorage.removeItem("bgColor");
 
-    // Store gradient colors
-    localStorage.setItem("color1", color1.value);
-    localStorage.setItem("color2", color2.value);
+    // Store gradient colors for this session
+    sessionStorage.setItem("color1", color1.value);
+    sessionStorage.setItem("color2", color2.value);
 }
 
 color1.addEventListener("input", setGradient);
