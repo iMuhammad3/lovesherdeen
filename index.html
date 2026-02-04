@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hi</title>
 </head>
 <body>
-    hi
+    <form id="secretForm" action="">
+        <p>Enter top secret access code: </p>
+        <input type="text" placeholder="hmm..">
+        <button>Enter</button>
+        <br><small id="hint"></small>
+    </form>
+    <script>
+        const hint = document.getElementById('hint');
+        const secretForm = document.getElementById('secretForm');
+
+        hint.innerHTML = "(Hint: It's your dads age)";
+        secretForm.onsubmit = function (e) {
+            e.preventDefault();
+            const userText = secretForm.querySelector("input").value;
+            if (userText == "pineapple" || userText == "Pineapple" ) {
+                window.location.href = "welcome.html";
+            } else if (!isNaN(userText) && userText !== "") {
+                hint.innerHTML = "i obviously dont know ur dads age lol.. just type in my fav fruit"
+            } else {
+                hint.innerHTML = "Oh so you don't know my fav fruit is pineapple,<br> i might reconsider this relationship 🤧"
+            }
+
+        }
+    </script>
 </body>
 </html>
