@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>background shenanigans</title>
+    </head>
+    <body>
+        <h2><a href="../welcome.html">Go back</a></h2>
+        <h4>Pick a background color:</h4>
+        <input type="color" id="bgColorPicker" />
+        <h4>Pick two colors for a gradient:</h4>
+        <input type="color" id="color1" value="#ff7f50" />
+        <input type="color" id="color2" value="#1e90ff" />
+
+        <script>
+            const colorPicker = document.getElementById("bgColorPicker");
+
+            // Listen for color changes
+            colorPicker.addEventListener("input", () => {
+                document.body.style.background = "";
+                document.body.style.backgroundColor = colorPicker.value;
+            });
+            const color1 = document.getElementById("color1");
+            const color2 = document.getElementById("color2");
+
+            function setGradient() {
+                document.body.style.height = "100vh";
+                document.body.style.background = `linear-gradient(40deg, ${color1.value}, ${color2.value})`;
+            }
+
+            // Listen for changes on both color inputs
+            color1.addEventListener("input", setGradient);
+            color2.addEventListener("input", setGradient);
+        </script>
+    </body>
+</html>
