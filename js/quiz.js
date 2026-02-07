@@ -7,19 +7,19 @@ const allQuestions = [
             "Overthinking life",
             "All of the above",
         ],
-        correct: 3,
+        correct: 4,
         difficulty: "medium",
     },
     {
         question: "What describes me best?",
         answers: ["Chill", "Quiet but deep", "Funny", "A bit of everything"],
-        correct: 3,
+        correct: 4,
         difficulty: "medium",
     },
     {
         question: "What’s my love language?",
         answers: ["Words", "Quality Time", "Physical touch", "Gifts"],
-        correct: 3,
+        correct: 2,
         difficulty: "medium",
     },
     {
@@ -37,7 +37,7 @@ const allQuestions = [
     {
         question: "The Surah I recite most often is",
         answers: ["Kahf", "Saffat", "Yusuf", "Naml"],
-        correct: 3,
+        correct: 1,
         difficulty: "medium",
     },
     {
@@ -49,7 +49,7 @@ const allQuestions = [
     {
         question: "What am I most conscious of",
         answers: ["My emotions", "My thoughts", "My surroundings"],
-        correct: 1,
+        correct: 2,
         difficulty: "medium",
     },
     
