@@ -5,6 +5,10 @@ body {
     background-color: #4b0082; /* your dark purple */
     color: #fff; /* light text to contrast */
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
