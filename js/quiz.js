@@ -29,9 +29,9 @@ const allQuestions = [
         difficulty: "medium",
     },
     {
-        question: "What’s something I rarely say out loud?",
-        answers: ["I need rest", "I care about you", "I’m shy"],
-        correct: 2,
+        question: "My biggest insecurity is",
+        answers: ["I have the face of a child", "My car", "I'm short", "I don't have any"],
+        correct: 1,
         difficulty: "medium",
     },
     {
@@ -41,8 +41,8 @@ const allQuestions = [
         difficulty: "medium",
     },
     {
-        question: "What's my best way to start the day",
-        answers: ["Morning walk", "Workout", "Sleep", "Writing"],
+        question: "What do I lie about most",
+        answers: ["How I really feel", "What I think of myself", "I seldom lie", "I lie about everything"],
         correct: 1,
         difficulty: "medium",
     },
@@ -90,6 +90,28 @@ const allQuestions = [
             "Chukwuemeka",
         ],
         correct: 1,
+        difficulty: "hard",
+    },
+    {
+        question: "What keeps me up at night",
+        answers: [
+            "I sleep like a baby",
+            "Existential dread",
+            "Daily worries and stress",
+            "Mental stimulation",
+        ],
+        correct: 3,
+        difficulty: "hard",
+    },
+    {
+        question: "Which am I afraid of",
+        answers: [
+            "To fail time and time again",
+            "To be rejected by someone I highly respect",
+            "To disappoint those who expect much from me",
+            "Change and uncertainty",
+        ],
+        correct: 2,
         difficulty: "hard",
     },
     {
